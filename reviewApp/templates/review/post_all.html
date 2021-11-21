@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <h1>Blog List</h1>
+{% extends 'banner.html' %}
+{% load static %}
+{% block content %}
+    <h1>게시판</h1>
     <br>
 
     {% for post in posts %}
@@ -16,9 +9,7 @@
     {{ post.modify_dt|date:"N d, Y" }}
     <p>{{ post.description }}</p>
     {% endfor %}
-
     <br>
-
     <div>
         <span>
             {% if page_obj.has_previous %}
@@ -32,8 +23,5 @@
             {% endif %}    
         </span>
     </div>
-
-
-
-</body>
+    {% endblock %}
 </html>

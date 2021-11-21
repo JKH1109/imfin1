@@ -3,7 +3,7 @@ from django.urls import path, re_path
 from . import views
 
 app_name = 'review'
-urlpatterns = [ #urlpatterns 로 쓰면 에러가 뜹니다 circular import
+urlpatterns = [ 
     #Example: /blog/
     path('', views.PostLV.as_view(), name='index'),
 
@@ -28,4 +28,7 @@ urlpatterns = [ #urlpatterns 로 쓰면 에러가 뜹니다 circular import
     #Example /blog/archive/today
     path('archive/today/', views.PostTAV.as_view(), name='post_today_archive'),
 
+
+    #test view /blog/test
+    path('test/', views.test, name='test'),
 ]

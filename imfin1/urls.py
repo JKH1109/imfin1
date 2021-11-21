@@ -19,7 +19,8 @@ from django.urls.conf import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('subApp1.urls')),
+    path('', include('mainApp.urls')),
+    path('brand/', include('subApp1.urls')),
     path('info/', include('subApp2.urls')),
     path('review/', include('reviewApp.urls')),
 ]

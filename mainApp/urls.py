@@ -5,7 +5,4 @@ app_name = 'mainApp'
 
 urlpatterns = [
     path('', mainPage, name='main_page'),
-    path('')
-    
-
 ]

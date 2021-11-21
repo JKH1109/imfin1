@@ -154,46 +154,16 @@
     <title>MOIM</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       
-     <a class="navbar-brand" href="#" style="padding:5px 30px">MOIM <h6>:모두의 임플란트</h6></a>
+  {% extends 'banner.html' %}
 
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-       <ul class="navbar-nav">
-         <li class="nav-item active">
-           <a class="nav-link" href="Home.html">HOME<span class="sr-only"></span></a>
-         </li>
-         <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            가격정보
-            </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="City.html">지역별</a></li>
-            <li><a class="dropdown-item" href="Hospital.html">병원규모별</a></li>
-          </ul>
-        </li>
-         <li class="nav-item">
-           <a class="nav-link" href="Info.html">건강정보</a>
-         </li>
-        <li class="nav-item">
-           <a class="nav-link" href="Review.html">리뷰쓰기</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link disabled" href="Home.html" tabindex="-1" aria-disabled="true"></a>
-         </li>
-       </ul>
-     </div>
-  </nav>
-  
+  {% block content%}
   <div class="nav-scroller bg-body shadow-sm">
 	  <nav class="nav nav-underline" aria-label="Secondary navigation">
 	    <a class="nav-link active" aria-current="page" href="#">홈</a>
-	    <a class="nav-link" href="Progress_info.html">시술 진행과정</a>
-	    <a class="nav-link" href="Manage_info.html">시술 후 관리방법</a>
-	    <a class="nav-link" href="Cost_info.html">비용차이가 왜 생길까?</a>
+	    <a class="nav-link" href="/info/progress/">시술 진행과정</a>
+	    <a class="nav-link" href="/info/manage/">시술 후 관리방법</a>
+	    <a class="nav-link" href="/info/cost/">비용차이가 왜 생길까?</a>
 	  </nav>
   </div>
   
@@ -394,5 +364,6 @@
        <defs></defs>
        <text x="0" y="53" style="font-weight:bold;font-size:53pt;font-family:Arial,Helvetica, Open Sans, sans-serif;dominant-baseline:middle">Thirdslide</text>
     </svg>
+    {% endblock %}
   </body>
 </html>

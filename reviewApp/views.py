@@ -4,6 +4,7 @@ from django.views.generic import dates
 from django.views.generic.dates import ArchiveIndexView, YearArchiveView, MonthArchiveView
 from django.views.generic.dates import DayArchiveView, TodayArchiveView
 from django.views.generic.detail import DetailView
+from django.shortcuts import render
 
 from . models import Post
 
@@ -14,7 +15,7 @@ class PostLV(ListView):
     model = Post
     template_name = 'review/post_all.html'
     context_object_name = 'posts'
-    paginate_by = 2
+    paginate_by = 5
 # DetailView                                                                               
 
 class PostDV(DetailView):
@@ -48,3 +49,6 @@ class PostTAV(TodayArchiveView):
     model = Post
     date_field = 'modify_dt'
    
+
+def test(request):
+    render(request, 'Review.html')

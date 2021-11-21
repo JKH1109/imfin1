@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 # Create your views here.
-def vhome(request):
-    return render(request,'Home.html')
+def osstempage(request):
+    return render(request,'Osstem.html')

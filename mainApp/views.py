@@ -4,11 +4,11 @@ from django.shortcuts import render
 def mainPage(request):
     return render(request,'Home.html')
 
-def base(request):
-    return render(request,'base.html')
+# def base(request):
+#     return render(request,'base.html')
 
-def infopage(request):
-    return render(request, "Info.html")
+# def infopage(request):
+#     return render(request, "Info.html")
 
-def costinfo(request):
-    return render(request, '')
+# def costinfo(request):
+#     return render(request, '')
