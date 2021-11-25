@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'mainApp',
     'subApp1',
     'subApp2',
+    'taggit.apps.TaggitAppConfig',
+    'taggit_templatetags2',
     'reviewApp.apps.ReviewappConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -122,4 +125,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+
+
 STATIC_URL = '/static/'
+
+#tag
+TAGGIT_CASE_INSENTIVE = True
+TAGGIT_LIMIT = 50
+
+
+
+
+
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL='/'

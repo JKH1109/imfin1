@@ -1,3 +1,5 @@
+{% extends 'banner.html' %}
+{% block content %}
 <h2>{{ object.title }}</h2>
 
 <p>
@@ -17,6 +19,17 @@
 <p>{{object.modify_dt|date:"j F Y"}}</p>
 <br>
 
-<div>
+<div class="body">
     {{object.content|linebreaks}}
 </div>
+<br>
+<div>
+<b>TAGS</b> <i class="fas fa-tag"></i>
+{% load taggit_templatetags2_tags %}
+{% get_tags_for_object object as "tags" %}
+{% for tag in tags %}
+<a href="{% url 'review:tagged_object_list' tag.name %}">{{tag.name}}</a>
+{% endfor %}
+&emsp;<a href="{% url 'review:tag_cloud' %}"><span class="btn btn-into btn-sm"></span></a>
+</div>
+{% endblock %}

@@ -29,6 +29,34 @@ urlpatterns = [
     path('archive/today/', views.PostTAV.as_view(), name='post_today_archive'),
 
 
+
+    # Example: /blog/tag/
+    path('tag/', views.TagCloudTV.as_view(), name='tag_cloud'),
+
+    # Example: /blog/tag/tagname/
+    path('tag/<str:tag>/', views.TaggedObjectLV.as_view(), name='tagged_object_list'),
+
+
+
+
+
+
     #test view /blog/test
     path('test/', views.test, name='test'),
+
+
+    # Example /review/search
+    path('search/', views.SearchFormView.as_view(), name='search'),
+
+    # Example: /review/add/
+    path('add/', views.PostCreateView.as_view(), name='add'),
+
+    # Exmaple /recivew/change/
+    path('change/', views.PostChangeLV.as_view(), name='change'),
+
+    # Example /review/99/update/
+    path('<int:pk>/update/', views.PostUpdateView.as_view(), name='update'),
+
+    # Example /review/99/delete/
+    path('<int:pk>/delete/',views.PostDeleteView.as_view(), name='delete'),
 ]

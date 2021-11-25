@@ -23,4 +23,6 @@ urlpatterns = [
     path('brand/', include('subApp1.urls')),
     path('info/', include('subApp2.urls')),
     path('review/', include('reviewApp.urls')),
+    
+    
 ]
