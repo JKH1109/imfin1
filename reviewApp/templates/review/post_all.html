@@ -95,7 +95,7 @@
                  <th>제목</th>
                  <th>작성자</th>
                  <th>날짜</th>
-                 <th>조회수</th>
+                 <!-- <th>조회수</th> -->
               </tr>
               </thead>
               <tbody>
@@ -104,9 +104,9 @@
                 <tr>
                   <td>{{ post.id }}</td>
                   <td><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></td>
-                  <td>작성자</td>
-                  <td>{{ post.modify_dt|date:"N d, Y" }}</td>
-                  <td>조회수</td>
+                  <td>{{ post.owner }}</td>
+                  <td>{{ post.modify_dt|date:"Y.m.d" }}</td>
+                  <!-- <td>조회수</td> -->
                 </tr>
               {% endfor %}
              </tbody>
@@ -130,7 +130,7 @@
                  </ul>
               </div>
               </div>
-                 <a class="btn btn-primary" style="float:right;" href="#" onclick="location.href='reviewwrite.html'">글쓰기</a>
+                 <a class="btn btn-primary" style="float:right;" href="{% url 'review:add' %}">글쓰기</a>
             </div>
             </div>
       

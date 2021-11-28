@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}post_confirm_delete.html{% endblock %}
+{% block title %}게시글 삭제{% endblock %}
 
 {% block content %}
 
@@ -8,7 +8,7 @@
     <br>
 
     <form action="." method="post">{% csrf_token %}
-        <p>Are you sure you want to delete "{{ object }}" ?</p>
+        <p>정말 게시글을 삭제하시겠습니까? "{{ object }}" ?</p>
         <input type="submit" value="Confirm" class="btn btn-danger btn-sm" />
     </form>
 

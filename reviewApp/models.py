@@ -2,7 +2,10 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.utils.text import slugify
+#태그 기능 모듈
 from taggit.managers import TaggableManager
+
+
 # Create your models here.
 class Post(models.Model):
     title = models.CharField(verbose_name='TITLE', max_length=50)
@@ -28,7 +31,13 @@ class Post(models.Model):
         return self.get_previous_by_modify_dt()
     def get_next(self):
         return self.get_next_by_modify_dt()
+
+    #게시글 작성자이름 불러오는 함수
+    def get_owner_name(self):
+        return self.owner
         
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title, allow_unicode=True)
         super().save(*args, **kwargs)
+
+

@@ -133,7 +133,10 @@ STATIC_URL = '/static/'
 TAGGIT_CASE_INSENTIVE = True
 TAGGIT_LIMIT = 50
 
+#댓글달기 disqus
 
+DISQUS_SHORTNAME = 'moim-moduyi-impeulranteu'
+DISQUS_MY_DOMAIN = 'http://127.0.0.1:8000'
 
 
 

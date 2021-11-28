@@ -6,6 +6,8 @@ from django.views.generic.dates import ArchiveIndexView, YearArchiveView, MonthA
 from django.views.generic.dates import DayArchiveView, TodayArchiveView
 from django.views.generic.detail import DetailView
 
+from django.conf import settings
+
 from django.db.models import Q
 from django.shortcuts import render
 
@@ -28,11 +30,21 @@ class PostLV(ListView):
     template_name = 'review/post_all.html'
     context_object_name = 'posts'
     paginate_by = 2
+    
 # DetailView                                                                               
 
 class PostDV(DetailView):
     model = Post
     template_name = 'review/post_detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['disqus_short'] = f"{settings.DISQUS_SHORTNAME}"
+        context['disqus_id'] = f"post-{self.object.id}-{self.object.slug}"
+        context['disqus_url'] = f"{settings.DISQUS_MY_DOMAIN}{self.object.get_absolute_url()}"
+        context['disqus_title'] = f"{self.object.slug}"
+        return context
+
 
 #ArchiveView
 
@@ -89,7 +101,6 @@ class TaggedObjectLV(ListView):
 
 class SearchFormView(FormView): 
     form_class = PostSearchForm 
-    template_name = 'blog/post_search.html' 
 
     def form_valid(self, form): 
         searchWord = form.cleaned_data['search_word']
@@ -105,13 +116,15 @@ class SearchFormView(FormView):
 
 
 
-# add change update delete
+# add change update delete 기능
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'slug', 'description', 'content', 'tags']
     initial = {'slug' : 'auto-filling-do-not-input'}
-    
+    template_name = 'review/post_form.html'
+
+
     def form_valid(self, form):
         form.instance.owner = self.request.user
         return super().form_valid(form)
@@ -126,7 +139,9 @@ class PostUpdateView(OwnerOnlyMixin, UpdateView):
     model = Post
     fields = ['title', 'slug', 'description', 'content', 'tags']
     success_url= reverse_lazy('mainApp:main_page')
+    template_name = 'review/post_form.html'
 
 class PostDeleteView(OwnerOnlyMixin, DeleteView):
     model = Post
+    template_name = "review/post_confirm_delete.html"
     success_url = reverse_lazy('mainApp:main_page')

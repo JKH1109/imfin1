@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
-{% block title %}post_change_list.html{% endblock %}
+{% block title %}게시글 수정/삭제.html{% endblock %}
 
 {% block content %}
 
-    <h1>Post Change - {{user}}</h1>
+    <h1>게시글 수정/삭제 - {{user}}</h1>
     <br>
 
     <table class="table table-bordered table-sm table-striped">
 
         <thead>
         <tr class="table-primary">
-            <th>Title</th>
-            <th>Description</th>
-            <th>Owner</th>
-            <th>Update</th>
-            <th>Delete</th>
+            <th>제목</th>
+            <th>부제</th>
+            <th>작성자</th>
+            <th>수정</th>
+            <th>삭제</th>
         </tr>
         </thead>
 
@@ -25,8 +25,8 @@
             <td>{{ item.title }}</td>
             <td>{{ item.description }}</td>
             <td>{{ item.owner }}</td>
-            <td><a href="{% url 'reviewApp:update' item.id %}">Update</a></td>
-            <td><a href="{% url 'reviewApp:delete' item.id %}">Delete</a></td>
+            <td><a href="{% url 'review:update' item.id %}">수정</a></td>
+            <td><a href="{% url 'review:delete' item.id %}">삭제</a></td>
         </tr>
         {% endfor %}
         </tbody>
