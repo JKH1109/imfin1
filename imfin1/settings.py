@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'taggit_templatetags2',
     'reviewApp.apps.ReviewappConfig',
     'widget_tweaks',
+    'brandApp'
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,7 @@ DISQUS_MY_DOMAIN = 'http://127.0.0.1:8000'
 
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL='/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
