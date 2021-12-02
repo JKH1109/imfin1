@@ -12,3 +12,8 @@ def info_progress_page(request):
 
 def info_cost_page(request):
     return render(request,'Cost_info.html')
+
+def info_city_page(request):
+    return render(request, 'City.html')
+def info_hospital_page(request):
+    return render(request, 'Hostpital.html')
