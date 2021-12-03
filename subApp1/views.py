@@ -30,7 +30,7 @@ def Sejong(request):
 
 def Incheon(request):
     incheon = DB.objects.filter(지역='인천')
-    return render(request, 'location/Incheon.html', {'incheon': incheon})
+    return render(request, 'location/abdc.html', {'incheon': incheon})
 
 def Gwangju(request):
     gwangju = DB.objects.filter(지역='광주')
@@ -75,3 +75,5 @@ def Jn(request):
 def Jeju(request):  
     jeju = DB.objects.filter(지역='제주')
     return render(request, 'location/Jeju.html', {'jeju': jeju})
+
+
