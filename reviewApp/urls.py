@@ -56,4 +56,10 @@ urlpatterns = [
 
     # Example /review/99/delete/
     path('<int:pk>/delete/',views.PostDeleteView.as_view(), name='delete'),
+
+
+
+
+    # #Example /review/post/django-example
+    # path('de', detail, name='detail'),
 ]

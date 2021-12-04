@@ -16,4 +16,4 @@ def info_cost_page(request):
 def info_city_page(request):
     return render(request, 'City.html')
 def info_hospital_page(request):
-    return render(request, 'Hostpital.html')
+    return render(request, 'Hospital.html')

@@ -29,13 +29,13 @@ class PostLV(ListView):
     model = Post
     template_name = 'review/post_all.html'
     context_object_name = 'posts'
-    paginate_by = 2
+    paginate_by = 3
     
 # DetailView                                                                               
 
 class PostDV(DetailView):
     model = Post
-    template_name = 'review/post_detail.html'
+    template_name = 'review/View.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -122,7 +122,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['title', 'slug', 'description', 'content', 'tags']
     initial = {'slug' : 'auto-filling-do-not-input'}
-    template_name = 'review/post_form.html'
+    template_name = 'review/Reviewwrite.html'
 
 
     def form_valid(self, form):
