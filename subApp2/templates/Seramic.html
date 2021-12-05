@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -157,7 +158,8 @@
     <title>MOIM</title>
   </head>
   <body>
- {% extends 'banner.html' %}    
+ {% extends 'banner.html' %}   
+ {% load static %}
  {% block content %}
   
   <main>
@@ -193,7 +195,7 @@
             	<title>Placeholder</title>
             	<rect width="100%" height="100%" fill="black"></rect>
             	<text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            	<image x="0" y="0" height="100%" width="100%" xlink:href="C:/JSP/Img/Seramic/metal.png" />
+            	<image x="0" y="0" height="100%" width="100%" xlink:href="{% static 'img/Seramic/metal.png'%}" />
             </svg>
 
             <div class="card-body" style="height:260px">
@@ -220,7 +222,7 @@
             	<title>Placeholder</title>
             	<rect width="100%" height="100%" fill="black"></rect>
             	<text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            	<image x="0" y="0" height="100%" width="100%" xlink:href="C:/JSP/Img/Seramic/gold.png" />
+            	<image x="0" y="0" height="100%" width="100%" xlink:href="{% static 'img/Seramic/gold.png' %}" />
             </svg>
 
             <div class="card-body" style="height:260px">
@@ -248,11 +250,11 @@
             	<title>Placeholder</title>
             	<rect width="100%" height="100%" fill="black"></rect>
             	<text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            	<image x="0" y="0" height="100%" width="100%" xlink:href="C:/JSP/Img/Seramic/all_seramic.png" />
+            	<image x="0" y="0" height="100%" width="100%" xlink:href="{% static 'img/Seramic/all_seramic.png' %}" />
             </svg>
 
             <div class="card-body" style="height:260px">
-              <strong><h5>올세라믹(All Seramic)</h5></strong>
+              <strong><h5>올세라믹(All Seramic)</h5></strong> 
               <ul>
               	<li>장점</li>
               	<ol>
@@ -273,7 +275,7 @@
             	<title>Placeholder</title>
             	<rect width="100%" height="100%" fill="black"></rect>
             	<text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            	<image x="0" y="0" height="100%" width="100%" xlink:href="C:/JSP/Img/Seramic/pfm.png" />
+            	<image x="0" y="0" height="100%" width="100%" xlink:href="{% static 'img/Seramic/pfm.png'%}" />
             </svg>
 
             <div class="card-body" style="height:260px">
@@ -301,7 +303,7 @@
             	<title>Placeholder</title>
             	<rect width="100%" height="100%" fill="black"></rect>
             	<text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            	<image x="0" y="0" height="100%" width="100%" xlink:href="C:/JSP/Img/Seramic/pfg.png" />
+            	<image x="0" y="0" height="100%" width="100%" xlink:href="{% static 'img/Seramic/pfg.png' %}"/>
             </svg>
 
             <div class="card-body" style="height:260px">
@@ -328,7 +330,7 @@
             	<title>Placeholder</title>
             	<rect width="100%" height="100%" fill="black"></rect>
             	<text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-            	<image x="0" y="0" height="100%" width="100%" xlink:href="C:/JSP/Img/Seramic/zirconia.png" />
+            	<image x="0" y="0" height="100%" width="100%" xlink:href="{% static 'img/Seramic/zirconia.png'%}" />
             </svg>
 
             <div class="card-body" style="height:260px">
