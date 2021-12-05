@@ -17,5 +17,8 @@ urlpatterns = [
     path('City/', info_city_page, name = 'info_city_page'),
     #Example info/Hospital/
     path('Hostpital/', info_hospital_page, name='info_hospital_page'),
+
+    #Example info/seramic
+    path('Seramic/', info_seramic_page, name='info_seramic_page'),
     
 ]

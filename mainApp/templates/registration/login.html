@@ -18,6 +18,7 @@
 
 
 {% block content %}
+<form action="." method="post" class="card-group" align="center">{% csrf_token %}
 <div class="col-md-12" align="center">
     <div class="col-md-10">
         <h1 style="font-family: 'Black Han Sans', sans-serif; font-size:40px">로그인</h1>
@@ -29,7 +30,7 @@
             {{ form.errors }}
         </div>
         {% endif %}
-
+        
         <div class="container">
             <div class="col-md-3" align="center">
                 <div class="row">
@@ -59,15 +60,18 @@
                         <tr>
                             <td>
                                 <button class="btn btn-lg btn-primary btn-block" type="submit"
-                                    style=" width:100px; height:60px; border-radius:5px; text-align:center; font-size:20px">Sign in</button>
+                                    style=" width:100px; height:60px; border-radius:5px; text-align:center; font-size:20px" value = {{next}}>Sign in</button>
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
         </div>
-    </div>
+        
+    </div> 
 </div>
+</form>
+{% endblock %}
 
 <!-- <form action="." method="post" class="card-group" align="center">{% csrf_token %}
 
@@ -97,4 +101,3 @@
 
     </form> -->
 
-{% endblock %}

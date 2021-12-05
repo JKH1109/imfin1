@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+{% extends 'banner.html' %}
 <head>
   <!-- Required meta tags -->
   <meta charset="UTF-8">
@@ -71,8 +71,8 @@
 </head>
 
 <body>
-
-
+{% block content %}
+<form action="." method="post" class="card-group" align="center">{% csrf_token %}
   <div class="container-fluid">
     <h3></h3>
     <h2 colspan="4" style="font-family: 'Black Han Sans', sans-serif; font-size:30px">리뷰쓰기</h2>
@@ -89,6 +89,7 @@
               <div class="form-group">
                 <label for="name">제목</label>
                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
+                
               </div>
             </div>
             <!-- 비밀번호 -->
@@ -116,6 +117,7 @@
       </div>
     </div>
   </div>
+</form>
   <br><br><br>
   
   <script src="css/assets/is/ie-emulation-modes-warning.js"></script>

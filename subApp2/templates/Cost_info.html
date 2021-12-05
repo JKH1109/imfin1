@@ -154,43 +154,11 @@
     <title>MOIM</title>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      
-     <a class="navbar-brand" href="/" style="padding:5px 30px">MOIM <h6>:모두의 임플란트</h6></a>
-
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-       <span class="navbar-toggler-icon"></span>
-     </button>
-     <div class="collapse navbar-collapse" id="navbarNav">
-       <ul class="navbar-nav">
-         <li class="nav-item active">
-           <a class="nav-link" href="/">HOME<span class="sr-only"></span></a>
-         </li>
-         <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            가격정보
-            </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="City.html">지역별</a></li>
-            <li><a class="dropdown-item" href="Hospital.html">병원규모별</a></li>
-          </ul>
-        </li>
-         <li class="nav-item">
-           <a class="nav-link" href="/info/">건강정보</a>
-         </li>
-        <li class="nav-item">
-           <a class="nav-link" href="/review/">리뷰쓰기</a>
-         </li>
-         <li class="nav-item">
-           <a class="nav-link disabled" href="/" tabindex="-1" aria-disabled="true"></a>
-         </li>
-       </ul>
-     </div>
-  </nav>
-  
+   {% extends 'banner.html' %}   
+  {% block content %}
   <div class="nav-scroller bg-body shadow-sm">
 	  <nav class="nav nav-underline" aria-label="Secondary navigation">
-	    <a class="nav-link active" aria-current="page" href="#">홈</a>
+	    <a class="nav-link active" aria-current="page" href="/info/">홈</a>
 	    <a class="nav-link" href="/info/progress">시술 진행과정</a>
 	    <a class="nav-link" href="/info/manage">시술 후 관리방법</a>
 	    <a class="nav-link" href="/info/cost">비용차이가 왜 생길까?</a>
@@ -199,182 +167,66 @@
   
   <main class="container">
 
-	   <div class="col-md-12 bg-light">
-	    <div class="row">
-	     <div class="col-md-2">
-	     </div>
-	
-	 
-	
-	    <div class="col-md-8">
-	      <h3 class="pb-4 mb-4 fst-italic border-bottom">
-	      	<br><br><br>
-	        병원마다 비용은 왜 차이가 날까?
-	      </h3>
-	
-	      <article class="blog-post">
-	        <h2 class="blog-post-title">예시) 초기 진행방식</h2>
-		        <p class="blog-post-meta">수정일자 2021/11/05</p>
-		
-		        <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, lists, tables, images, code, and more are all supported as expected.</p>
-		        <hr>
-		        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-	        <h2>진행 예시</h2>
-		        <p>This is an example blockquote in action:</p>
-		        <blockquote class="blockquote">
-		          <p>Quoted text goes here.</p>
-		        </blockquote>
-		        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-	        <h3>예시사진들</h3>
-		        <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
-		        <ul>
-		          <li>First list item</li>
-		          <li>Second list item with a longer description</li>
-		          <li>Third list item to close it out</li>
-		        </ul>
-		        <p>And this is an ordered list:</p>
-		        <ol>
-		          <li>First list item</li>
-		          <li>Second list item with a longer description</li>
-		          <li>Third list item to close it out</li>
-		        </ol>
-		        <p>And this is a definition list:</p>
-		        <dl>
-		          <dt>HyperText Markup Language (HTML)</dt>
-		          <dd>The language used to describe and define the content of a Web page</dd>
-		          <dt>Cascading Style Sheets (CSS)</dt>
-		          <dd>Used to describe the appearance of Web content</dd>
-		          <dt>JavaScript (JS)</dt>
-		          <dd>The programming language used to build advanced Web sites and applications</dd>
-		        </dl>
-	        <h2>진행예시</h2>
-		        <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-		        <ul>
-		          <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
-		          <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
-		          <li>Abbreviations, like <abbr title="HyperText Markup Langage">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
-		          <li>Citations, like <cite>— Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
-		          <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
-		          <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
-		        </ul>
-		        <p>Most of these elements are styled by browsers with few modifications on our part.</p>
-	        <h2>제목</h2>
-		        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-	        <h3>부제목</h3>
-		        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-		        <pre><code>Example code block</code></pre>
-		        <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-	      </article>
-	
-	      <article class="blog-post">
-	        <h2 class="blog-post-title">연도별 예시</h2>
-		        <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
-		
-		        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-		        <blockquote>
-		          <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
-		        </blockquote>
-		        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-	        <h3>예시 테이블</h3>
-		        <p>And don't forget about tables in these posts:</p>
-		        <table class="table">
-		          <thead>
-		            <tr>
-		              <th>Name</th>
-		              <th>Upvotes</th>
-		              <th>Downvotes</th>
-		            </tr>
-		          </thead>
-		          <tbody>
-		            <tr>
-		              <td>Alice</td>
-		              <td>10</td>
-		              <td>11</td>
-		            </tr>
-		            <tr>
-		              <td>Bob</td>
-		              <td>4</td>
-		              <td>3</td>
-		            </tr>
-		            <tr>
-		              <td>Charlie</td>
-		              <td>7</td>
-		              <td>9</td>
-		            </tr>
-		          </tbody>
-		          <tfoot>
-		            <tr>
-		              <td>Totals</td>
-		              <td>21</td>
-		              <td>23</td>
-		            </tr>
-		          </tfoot>
-		        </table>
-		
-		        <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-	      </article>
-		
-	      <article class="blog-post">
-	        <h2 class="blog-post-title">요약하자면</h2>
-	
-		        <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
-		        <ul>
-		          <li>First list item</li>
-		          <li>Second list item with a longer description</li>
-		          <li>Third list item to close it out</li>
-		        </ul>
-		        <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
-	      </article>
-	
-	      <nav class="blog-pagination" aria-label="Pagination">
-	        <a class="btn btn-outline-primary" href="#">구버전</a>
-	        <a class="btn btn-outline-secondary disabled">신버전</a>
-	      </nav>
-	
-	    </div>       
-	  </div>
-  </main>
- 
-  
-  <br><br>
-  <div class="container py-4">
-    <div class="row align-items-md-stretch">
-      <div class="col-md-3">
-        <div class="h-100 p-5 text-white bg-dark rounded-3">
-          <h2>사진</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
+    <div class="col-md-12 bg-light">
+      <div class="row">
+        <div class="col-md-2">
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="h-100 p-5 text-white bg-dark rounded-3">
-          <h2>사진</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="h-100 p-5 text-white bg-dark rounded-3">
-          <h2>사진</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="h-100 p-5 text-white bg-dark rounded-3">
-          <h2>사진</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
+
+
+
+        <div class="col-md-8">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            <br><br><br>
+            병원마다 비용은 왜 차이가 날까?
+          </h3>
+
+          <article class="blog-post">
+            <h2 class="blog-post-title">지역별, 병원규모별로 비용차이가 발생하는 이유는?</h2>
+            <p class="blog-post-meta">수정일자 2021/11/05</p><br>
+
+            <ol>
+              <li>국산 임플란트 브랜드 vs 해외 임플란트 브랜드</li><br>
+              <li>기성품 임플란트 vs 맞춤형 임플란트</li><br>
+              <li>급여항목 & 비급여항목</li><br>
+              <li>그 외</li><br>
+            </ol>
+            <hr>
+            <br>
+            <h3>국산 임플란트 브랜드 vs 해외 임플란트 브랜드</h3>
+            <p>과거에는 해외 브랜드의 임플란트 품질이 좋다는 평가가 많았었지만, 현재에 들어서 국산 브랜드의 임상 데이터의 축적과 그 축적된 데이터를 통해 출시된 제품들을 통하여 이제는 품질적인 차이가
+              나지 않는다는 평가가 나오고 있습니다.
+              하지만 그 평가가 완벽하게 바뀐 것은 아니기에 차이가 나는 곳이 존재할 수 있습니다.</p><br>
+            <p>이렇듯 제조회사에 따라 가격에 차이가 발생하는데 가격이 비싸다고 무조건 좋은 임플란트는 아닙니다. 또한, 좋은 임플란트를 정하는 것보다
+              시술 후에 임플란트를 잘 관리해주는 것이 더 중요합니다.</p><br>
+            <hr><br>
+            <h3>기성품 임플란트 vs 맞춤형 임플란트</h3>
+            <p>오랜 임상 데이터를 통해 규격화 되어진 상품들과, 개인별로 맞추어진 구강 상태에 맞춰 제작이 되는 맞춤형 임플란트가 있는데, 기성품은
+              보편화 된 규격을 가지고 있기 때문에 잇몸 상태가 건강한 경우라면 비용부담을 줄이고 오랜 시간 사용할 수 있는 방법입니다. 이에 반해
+              맞춤형 임플란트는 잇몸 상태가 건강하지 않거나 치아가 소실된지 오랜 시간이 흘렀을 대보다 적합한 방법이므로 자신의 상태에 맞는 제품을 선택하기 때문에 비용차이가 발생할 수 있습니다.</p>
+            <br>
+            <hr><br>
+            <h3>급여항목 & 비급여항목</h3>
+            <ul>
+              <li>비급여항목 : 각 치과 상황에 따라서 스스로 결정되며, 임플란트가 이에 속하기 때문에 치과마다 가격차이가 발생할 수 밖에 있습니다.</li><br>
+              <li>인건비 : 경력이 짧은 의사보다 수많은 시술건수 경력을 갖춘 의사가 당연하게도 더 많은 인건비를 가지게 됩니다.</li><br>
+            </ul>
+            <hr><br>
+            <h3>그 외</h3>
+            <p>잇몸뼈가 부족하여 뼈이식이 필요한 경우, 고령자의 경우 임플란트 건강보험 유무 등등 비용이 추가되거나 할인 되는 요소들이 많이 존재하니 치과 방문 후 담당 의사분과 자신의 상황에 맞게
+              상담을 하시는게 좋다고 말씀드릴 수 있습니다.</p><br><br>
+
+
+            <hr class="featurette-divider">
+            <hr>
+
         </div>
       </div>
     </div>
-  </div>
-
-          <hr class="featurette-divider">
-          <hr>
-      <div class="footer">
-        <p>© MOIM 2021</p>
-      </div>
+  </main>
+ 
+  
+  
+{% endblock %}
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->

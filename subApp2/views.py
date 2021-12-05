@@ -17,3 +17,6 @@ def info_city_page(request):
     return render(request, 'City.html')
 def info_hospital_page(request):
     return render(request, 'Hospital.html')
+
+def info_seramic_page(request):
+    return render(request, 'Seramic.html')
