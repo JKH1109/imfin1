@@ -1,12 +1,12 @@
-{% extends "base.html" %}
+{% extends "banner.html" %}
 {% load widget_tweaks %}
 
 {% block title %}register.html{% endblock %}
 
 {% block content %}
 
-    <h1>New User Registration</h1>
-    <p class="font-italic">Please enter your username and password twice.</p>
+    <h1>회원가입</h1>
+    <p class="font-italic">아이디와 패스워드 두 번을 입력해주세요</p>
 
     {% if form.errors %}
     <div class="alert alert-danger">
@@ -38,7 +38,7 @@
 
         <div class="form-group">
             <div class="offset-sm-3 col-sm-5">
-                <input type="submit" value="Register" class="btn btn-info"/>
+                <input type="submit" value="생성하기" class="btn btn-info"/>
             </div>
         </div>
 
