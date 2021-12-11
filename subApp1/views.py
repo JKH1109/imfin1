@@ -5,8 +5,6 @@ from .models import *
 from django.core.paginator import Paginator
 # Create your views here.
 
-def osstempage(request):
-    return render(request,'location/Osstem.html')
 
 def Seoul(request):
     seoul = DB.objects.filter(지역='서울')

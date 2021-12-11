@@ -1,9 +1,9 @@
 
-from django.db.models import fields
-from django.views.generic import ListView, DeleteView, FormView, TemplateView
-from django.views.generic import dates
-from django.views.generic.dates import ArchiveIndexView, YearArchiveView, MonthArchiveView
-from django.views.generic.dates import DayArchiveView, TodayArchiveView
+
+from django.views.generic import ListView, DeleteView, FormView, TemplateView, CreateView, UpdateView, DeleteView
+
+from django.views.generic.dates import ArchiveIndexView, YearArchiveView, MonthArchiveView, DayArchiveView, TodayArchiveView
+
 from django.views.generic.detail import DetailView
 
 from django.conf import settings
@@ -14,13 +14,10 @@ from django.shortcuts import render
 from reviewApp.models import Post
 from reviewApp.form import PostSearchForm
 
-from django.views.generic import CreateView,UpdateView,DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from mainApp.views import OwnerOnlyMixin
 
-
-from . models import Post
 
 
 #-- ListView
@@ -74,9 +71,9 @@ class PostTAV(TodayArchiveView):
     date_field = 'modify_dt'
    
 
-def test(request):
-    render(request, 'Review.html')
-#
+# def test(request):
+#     render(request, 'Review.html')
+# #
 
 #--- Tag View
 class TagCloudTV(TemplateView):

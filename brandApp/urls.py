@@ -19,5 +19,4 @@ urlpatterns = [
     path('Envista/', envista, name = 'envista_page'),
     path('Dentsply_sirona/', dentsply, name = 'dentsply_page'),
     path('Zimmer_Biomet/', zimmer, name = 'zimmer_page'),
-    
 ]

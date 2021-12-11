@@ -38,8 +38,8 @@ urlpatterns = [
 
 
 
-    #test view /blog/test
-    path('test/', views.test, name='test'),
+    # #test view /blog/test
+    # path('test/', views.test, name='test'),
 
 
     # Example /review/search
