@@ -1,5 +1,5 @@
 <!doctype html>
-
+{% extends 'banner.html' %}
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -8,7 +8,7 @@
    <meta name="description" content="">
    <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
     <meta name="generator" content="Hugo 0.88.1">
-   <title>MOIM:건강정보</title>
+  
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
 
@@ -155,17 +155,20 @@
     <link href="navbar-fixed-top.css" rel="stylesheet">
     <link href="carousel.css" rel="stylesheet">
     <script src="css/assets/is/ie-emulation-modes-warning.js"></script>
-    <title>MOIM</title>
+    <title>MOIM : 보철물정보</title>
   </head>
   <body>
- {% extends 'banner.html' %}   
+ 
  {% load static %}
+
+
+
  {% block content %}
   
   <main>
     <div class="container py-4">
 	    <header class="pb-3 mb-4 border-bottom">
-	      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+	      <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
 	        <span style="font-family: 'Black Han Sans', sans-serif; font-size:50px">보철물 정보</span>
 	      </a>
 	    </header>
