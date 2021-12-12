@@ -19,14 +19,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
+ 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'xbx@g3a%b1w_mqnjzmp1#3_3rhci3y)*e0nykku46ietugjgp1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [ 'localhost', '127.0.0.1' ]
+ALLOWED_HOSTS = [ '*' ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 # Application definition
@@ -143,7 +145,3 @@ DISQUS_MY_DOMAIN = 'http://127.0.0.1:8000'
 
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL='/'
-
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
